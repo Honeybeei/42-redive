@@ -8,7 +8,7 @@ This project is the first project of the 42 common core curriculum. The goal is 
 
 ### Part 1 - Libc functions
 
-[] `ft_isalpha` - Prototype: `int ft_isalpha(int c);`
+[ ] `ft_isalpha` - Prototype: `int ft_isalpha(int c);`
 
 - Parameters:
   - `c`: The character to be checked.
