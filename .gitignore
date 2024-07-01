@@ -1,32 +1,74 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# C/C++
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
+*.out
+*.exe
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
+*.so
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# JavaScript
+node_modules/
+npm-debug.log
+yarn-error.log
+*.log
+.npm
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build directories
+build/
+dist/
+
+# Dependency directories
+vendor/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/

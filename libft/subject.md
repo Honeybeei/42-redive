@@ -8,19 +8,19 @@ This project is the first project of the 42 common core curriculum. The goal is 
 
 ### Part 1 - Libc functions
 
-- [ ] `ft_isalpha` - Prototype: `int ft_isalpha(int c);`
+- [x] `ft_isalpha` - Prototype: `int ft_isalpha(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is alphabetic, 0 otherwise.
   - Description: Checks if the given character is an alphabetic character.
 
-- [ ] `ft_isdigit` - Prototype: `int ft_isdigit(int c);`
+- [x] `ft_isdigit` - Prototype: `int ft_isdigit(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is a digit, 0 otherwise.
   - Description: Checks if the given character is a digit (0 through 9).
 
-- [ ] `ft_isalnum` - Prototype: `int ft_isalnum(int c);`
+- [x] `ft_isalnum` - Prototype: `int ft_isalnum(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is alphanumeric, 0 otherwise.
