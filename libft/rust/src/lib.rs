@@ -22,6 +22,14 @@ pub mod libft {
         }
         false
     }
+
+    // ft_isascii
+    pub fn is_ascii(c: char) -> bool {
+        if c >= '\0' && c <= '\x7F' {
+            return true;
+        }
+        false
+    }
 }
 
 #[cfg(test)]
@@ -59,5 +67,14 @@ mod tests {
         assert_eq!(is_alnum('0'), true);
         assert_eq!(is_alnum('9'), true);
         assert_eq!(is_alnum(' '), false);
+    }
+
+    #[test]
+    fn test_is_ascii() {
+        // check for ascii characters
+        assert_eq!(is_ascii('\0'), true);
+        assert_eq!(is_ascii('\x7F'), true);
+        // check for non-ascii characters
+        assert_eq!(is_ascii('😀'), false);
     }
 }

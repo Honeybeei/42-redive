@@ -26,7 +26,7 @@ This project is the first project of the 42 common core curriculum. The goal is 
   - Return value: Non-zero if the character is alphanumeric, 0 otherwise.
   - Description: Checks if the given character is alphanumeric.
 
-- [ ] `ft_isascii` - Prototype: `int ft_isascii(int c);`
+- [x] `ft_isascii` - Prototype: `int ft_isascii(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is in the ASCII character set, 0 otherwise.

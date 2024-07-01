@@ -1,3 +1,5 @@
+#include "libft.h"
+
 /**
  * @brief Checks if the given character is an alphabetic character.
  *

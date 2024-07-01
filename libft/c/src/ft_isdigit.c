@@ -1,3 +1,5 @@
+#include "libft.h"
+
 /**
  * @brief Checks if the given character is a digit (0 through 9).
  *
