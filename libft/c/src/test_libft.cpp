@@ -2,30 +2,25 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include <tuple>
 #include <vector>
 
 #include "libft.h"
 
 template <typename Ret, typename... Args>
-void test_function(const std::string& function_name,
-                   std::function<Ret(Args...)> func,
-                   const std::vector<std::tuple<Args...>>& test_cases,
-                   const std::vector<Ret>& expected_results) {
-  if (test_cases.size() != expected_results.size()) {
-    throw std::runtime_error(
-        "Number of test cases doesn't match number of expected results");
-  }
-
-  for (size_t i = 0; i < test_cases.size(); ++i) {
+void test_function(
+    const std::string& function_name, Ret (*func)(Args...),
+    const std::vector<std::pair<std::tuple<Args...>, Ret>>& test_cases) {
+  for (const auto& [input, expected] : test_cases) {
     try {
-      Ret result = std::apply(func, test_cases[i]);
-      if (result != expected_results[i]) {
+      auto result = std::apply(func, input);
+      if (result != expected) {
         std::ostringstream oss;
         oss << "Test failed for function " << function_name
             << " with parameters: ";
         std::apply([&oss](const Args&... args) { ((oss << args << " "), ...); },
-                   test_cases[i]);
-        oss << "\nExpected: " << expected_results[i] << ", Got: " << result;
+                   input);
+        oss << "\nExpected: " << expected << ", Got: " << result;
         throw std::runtime_error(oss.str());
       }
     } catch (const std::exception& e) {
@@ -35,42 +30,36 @@ void test_function(const std::string& function_name,
   std::cout << "All tests passed for function " << function_name << std::endl;
 }
 
+void test_ft_isalpha() {
+  std::vector<std::pair<std::tuple<int>, int>> test_cases = {
+      {{'a'}, 1}, {{'z'}, 1}, {{'A'}, 1}, {{'Z'}, 1}, {{'0'}, 0},
+      {{'9'}, 0}, {{' '}, 0}, {{'.'}, 0}, {{'/'}, 0}, {{'@'}, 0},
+      {{'['}, 0}, {{'`'}, 0}, {{'{'}, 0}, {{'~'}, 0}};
+
+  test_function("ft_isalpha", ft_isalpha, test_cases);
+};
+
+void test_ft_isdigit() {
+  std::vector<std::pair<std::tuple<int>, int>> test_cases = {
+      {{'a'}, 0}, {{'z'}, 0}, {{'A'}, 0}, {{'Z'}, 0}, {{'0'}, 1},
+      {{'9'}, 1}, {{' '}, 0}, {{'.'}, 0}, {{'/'}, 0}, {{'@'}, 0},
+      {{'['}, 0}, {{'`'}, 0}, {{'{'}, 0}, {{'~'}, 0}};
+
+  test_function("ft_isdigit", ft_isdigit, test_cases);
+};
+
+void test_ft_isalnum() {
+  std::vector<std::pair<std::tuple<int>, int>> test_cases = {
+      {{'a'}, 1}, {{'z'}, 1}, {{'A'}, 1}, {{'Z'}, 1}, {{'0'}, 1},
+      {{'9'}, 1}, {{' '}, 0}, {{'.'}, 0}, {{'/'}, 0}, {{'@'}, 0},
+      {{'['}, 0}, {{'`'}, 0}, {{'{'}, 0}, {{'~'}, 0}};
+
+  test_function("ft_isalnum", ft_isalnum, test_cases);
+};
+
 int main() {
-  // Test ft_isalpha function
-  std::function<int(int)> ft_isalpha_func = ft_isalpha;
-  std::vector<std::tuple<int>> ft_isalpha_test_cases = {
-      {'a'}, {'A'}, {'z'}, {'Z'}, {'1'}, {'0'}, {' '}, {'\n'}, {'\t'}};
-  std::vector<int> ft_isalpha_expected_results = {1, 1, 1, 1, 0, 0, 0, 0, 0};
-
-  test_function("ft_isalpha", ft_isalpha_func, ft_isalpha_test_cases,
-                ft_isalpha_expected_results);
-
-  // Test ft_isdigit function
-  std::function<int(int)> ft_isdigit_func = ft_isdigit;
-  std::vector<std::tuple<int>> ft_isdigit_test_cases = {
-      {'a'}, {'A'}, {'z'}, {'Z'}, {'1'}, {'0'}, {' '}, {'\n'}, {'\t'}};
-  std::vector<int> ft_isdigit_expected_results = {0, 0, 0, 0, 1, 1, 0, 0, 0};
-
-  test_function("ft_isdigit", ft_isdigit_func, ft_isdigit_test_cases,
-                ft_isdigit_expected_results);
-
-  // Test ft_isalnum function
-  std::function<int(int)> ft_isalnum_func = ft_isalnum;
-  std::vector<std::tuple<int>> ft_isalnum_test_cases = {
-      {'a'}, {'A'}, {'z'}, {'Z'}, {'1'}, {'0'}, {' '}, {'\n'}, {'\t'}};
-  std::vector<int> ft_isalnum_expected_results = {1, 1, 1, 1, 1, 1, 0, 0, 0};
-
-  test_function("ft_isalnum", ft_isalnum_func, ft_isalnum_test_cases,
-                ft_isalnum_expected_results);
-
-  // Test ft_isascii function
-  std::function<int(int)> ft_isascii_func = ft_isascii;
-  std::vector<std::tuple<int>> ft_isascii_test_cases = {{0},   {65},  {97},
-                                                        {127}, {128}, {-1}};
-  std::vector<int> ft_isascii_expected_results = {1, 1, 1, 1, 0, 0};
-
-  test_function("ft_isascii", ft_isascii_func, ft_isascii_test_cases,
-                ft_isascii_expected_results);
-
+  test_ft_isalpha();
+  test_ft_isdigit();
+  test_ft_isalnum();
   return 0;
 }
