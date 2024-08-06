@@ -6,45 +6,52 @@ This project is the first project of the 42 common core curriculum. The goal is 
 
 ## Functions to implement
 
-### Part 1 - Libc functions
+### Part 1 - Standard C Library functions
 
-- [x] `ft_isalpha` - Prototype: `int ft_isalpha(int c);`
+- [x] `ft_isalpha`
+  - Prototype: `int ft_isalpha(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is alphabetic, 0 otherwise.
   - Description: Checks if the given character is an alphabetic character.
 
-- [x] `ft_isdigit` - Prototype: `int ft_isdigit(int c);`
+- [x] `ft_isdigit`
+  - Prototype: `int ft_isdigit(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is a digit, 0 otherwise.
   - Description: Checks if the given character is a digit (0 through 9).
 
-- [x] `ft_isalnum` - Prototype: `int ft_isalnum(int c);`
+- [x] `ft_isalnum`
+  - Prototype: `int ft_isalnum(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is alphanumeric, 0 otherwise.
   - Description: Checks if the given character is alphanumeric.
 
-- [x] `ft_isascii` - Prototype: `int ft_isascii(int c);`
+- [x] `ft_isascii`
+  - Prototype: `int ft_isascii(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is in the ASCII character set, 0 otherwise.
   - Description: Checks if the given character is in the ASCII character set.
 
-- [ ] `ft_isprint` - Prototype: `int ft_isprint(int c);`
+- [x] `ft_isprint`
+  - Prototype: `int ft_isprint(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is printable, 0 otherwise.
   - Description: Checks if the given character is a printable character.
 
-- [ ] `ft_strlen` - Prototype: `size_t ft_strlen(const char *s);`
+- [x] `ft_strlen`
+- Prototype: `size_t ft_strlen(const char *s);`
   - Parameters:
     - `s`: The string to be measured.
   - Return value: The number of characters in the string.
   - Description: Calculates the length of the given string.
 
-- [ ] `ft_memset` - Prototype: `void *ft_memset(void *b, int c, size_t len);`
+- [x] `ft_memset`
+- Prototype: `void *ft_memset(void *b, int c, size_t len);`
   - Parameters:
     - `b`: Pointer to the memory area to be filled.
     - `c`: The value to be set (converted to an unsigned char).
