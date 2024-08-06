@@ -1,4 +1,4 @@
-# 42Redive
+# Redive in to 42 common core
 
 ## Introduction
 
@@ -8,9 +8,8 @@ This repository is a parallel universe of my original 42 common core projects, r
 
 ## Projects
 
-1. **Project 1: libft**
-   - **Description:** Implementation of basic functions for further use in other projects.
-   - **Languages:** C/C++, Rust
-   - **Link to original project:** [Original Project Link](subjects/libft.pdf)
+### [libft](./libft/subject.md)
+
+- **Description:** Implementation of basic functions for further use in other projects.
 
 *...and so on for each project.*
