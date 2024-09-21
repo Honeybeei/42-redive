@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "4d382ca2394f7af8",
+    "id": "5bf464bc051a6561",
     "type": "split",
     "children": [
       {
-        "id": "1e270d9a13d56e4a",
+        "id": "e81f2719672430c1",
         "type": "tabs",
         "children": [
           {
-            "id": "15fd52ed85979077",
+            "id": "34936dc0a6abf549",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b9429b679a762704",
+    "id": "60f5ae72cba5f3a7",
     "type": "split",
     "children": [
       {
-        "id": "84ff844671d1066e",
+        "id": "99af49a56c86abe9",
         "type": "tabs",
         "children": [
           {
-            "id": "b9e98b6d12524b6c",
+            "id": "820a3006aadbfe06",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "afd3a4298874a42d",
+            "id": "1566ad56c0a3a1e9",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "5e6714054156bac9",
+            "id": "ec9e2f51106ae80a",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,19 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "e52f44d536866442",
+    "id": "c19eb331c52d0b5c",
     "type": "split",
     "children": [
       {
-        "id": "2f71f4ee8b91b970",
+        "id": "82bf84ef5527e7b0",
         "type": "tabs",
         "children": [
           {
-            "id": "ce1a89664ccb45cf",
+            "id": "68acb1ed60f5b96d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "e8f98ecd70222413",
+            "id": "231e4476e20e0981",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6d9eb2a4e2e334be",
+            "id": "950aa30fb7d6c6ee",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "a3e60a928645d427",
+            "id": "2be80acd4bdf707f",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           }
         ]
@@ -138,9 +146,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "15fd52ed85979077",
-  "lastOpenFiles": [
-    "libft/subject.md",
-    "README.md"
-  ]
+  "active": "34936dc0a6abf549",
+  "lastOpenFiles": []
 }
