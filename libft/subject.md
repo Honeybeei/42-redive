@@ -1,4 +1,4 @@
-# libft
+# Libft
 
 ## Introduction
 
@@ -8,49 +8,49 @@ This project is the first project of the 42 common core curriculum. The goal is 
 
 ### Part 1 - Standard C Library functions
 
-- [x] `ft_isalpha`
+- [ ] `ft_isalpha`
   - Prototype: `int ft_isalpha(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is alphabetic, 0 otherwise.
   - Description: Checks if the given character is an alphabetic character.
 
-- [x] `ft_isdigit`
+- [ ] `ft_isdigit`
   - Prototype: `int ft_isdigit(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is a digit, 0 otherwise.
   - Description: Checks if the given character is a digit (0 through 9).
 
-- [x] `ft_isalnum`
+- [ ] `ft_isalnum`
   - Prototype: `int ft_isalnum(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is alphanumeric, 0 otherwise.
   - Description: Checks if the given character is alphanumeric.
 
-- [x] `ft_isascii`
+- [ ] `ft_isascii`
   - Prototype: `int ft_isascii(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is in the ASCII character set, 0 otherwise.
   - Description: Checks if the given character is in the ASCII character set.
 
-- [x] `ft_isprint`
+- [ ] `ft_isprint`
   - Prototype: `int ft_isprint(int c);`
   - Parameters:
     - `c`: The character to be checked.
   - Return value: Non-zero if the character is printable, 0 otherwise.
   - Description: Checks if the given character is a printable character.
 
-- [x] `ft_strlen`
+- [ ] `ft_strlen`
 - Prototype: `size_t ft_strlen(const char *s);`
   - Parameters:
     - `s`: The string to be measured.
   - Return value: The number of characters in the string.
   - Description: Calculates the length of the given string.
 
-- [x] `ft_memset`
+- [ ] `ft_memset`
 - Prototype: `void *ft_memset(void *b, int c, size_t len);`
   - Parameters:
     - `b`: Pointer to the memory area to be filled.
