@@ -1,5 +1,12 @@
 # Libft
 
+- [Libft](#libft)
+  - [Introduction](#introduction)
+  - [Functions to implement](#functions-to-implement)
+    - [Part 1 - Standard C Library functions](#part-1---standard-c-library-functions)
+    - [Part 2 - Additional functions](#part-2---additional-functions)
+    - [Bonus Part](#bonus-part)
+
 ## Introduction
 
 This project is the first project of the 42 common core curriculum. The goal is to create a library of useful functions that will be used in future projects.
